@@ -9,8 +9,8 @@ def main():
     parser.add_argument("ipaddress", help="The ip address of the camera")
     args = parser.parse_args()
     ipaddress = args.ipaddress
-    url = 'http://' + ipaddress + '/cgi-bin/status'
-    #url = 'http://' + ipaddress + '/cgi-bin/action?cmd=reboot'
+    #url = 'http://' + ipaddress + '/cgi-bin/status'
+    url = 'http://' + ipaddress + '/cgi-bin/action?cmd=reboot'
     try:
         urllib.request.urlopen(url)
         success = 'okay'
